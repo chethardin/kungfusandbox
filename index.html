@@ -20,32 +20,45 @@
         </script>
         <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
         <style amp-custom>
+            html {
+                height:100%; 
+            }
             body {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                padding: 20px;
-                min-height: calc( 100vh - 40px);
-                font-family: 'Optima', Helvetica, Arial, sans-serif;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                color: #2c3e50;
-                font-size: 16px;
+                min-height: 100%;
+            }
+            .wrap{
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                flex-direction:column;
+                padding:20px;
+                min-height:calc( 100vh - 40px);
+                font-family:'Optima', Helvetica, Arial, sans-serif;
+                -webkit-font-smoothing:antialiased;
+                -moz-osx-font-smoothing:grayscale;
+                color:#2c3e50;
+                font-size:16px;
+                text-align:center;
             }
             h1 {
                 font-family: 'Copperplate', Helvetica, Arial, sans-serif;
                 transition: all ease-in 300ms;
                 font-size: 2rem;
-                animation: textgrowth 600ms ease-out;
-                -webkit-animation: textgrowth 600ms ease-out;
-                -moz-animation: textgrowth 600ms ease-out;
             }
-            .logo {
-                position: absolute;
-                transform: translate(0,-175px);
-                -webkit-transform: translate(0,-175px);
-                -moz-transform: translate(0,-175px);
+            h3 {
+                font-family: 'Copperplate', Helvetica, Arial, sans-serif;
+                margin: 40px 0 0;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            li {
+                display: inline-block;
+                margin: 0 10px;
+            }
+            a {
+                color: #42b983;
             }
             .kitty {
                 max-width: 200px;
@@ -67,19 +80,32 @@
         </style>
     </head>
     <body>
-        <div class="logo">
+        <div class="wrap">
             <amp-anim class="kitty" width="351" height="389" src="assets/giphy.gif" alt="Welcome"></amp-anim>
+            <header>
+                <h1>Kung Fu Sandbox</h1>
+            </header>
+            <main>
+                <p>Chet Hardin makes web things, too.</p>
+                <h3>Some of my websites</h3>
+                <ul>
+                    <li><a href="https://hklawstl.com/" target="_blank" rel="noopener" tabindex="1">HK Law</a></li>
+                    <li><a href="https://atomickiki.com" target="_blank" rel="noopener" tabindex="2">Atomic Kiki</a></li>
+                    <li><a href="https://lightingsolutions.us.com" target="_blank" rel="noopener" tabindex="3">Lighting Solutions</a></li>
+                    <li><a href="http://ginsengcreative.com" target="_blank" rel="noopener" tabindex="4">Ginseng Creative</a></li>
+                    <li><a href="https://www.poynterlandscape.com/" target="_blank" rel="noopener" tabindex="5">Poynter Landscaping</a></li>
+                </ul>
+                <h3>Meet me in Saint Louis</h3>
+                <ul>
+                    <li><a href="mailto:chet.hardin@gmail.com" tabindex="6">Email</a></li>
+                    <li><a href="tel:7194192411" tabindex="7">Phone</a></li>
+                </ul>
+            </main>
         </div>
-        <h1>Kung Fu Sandbox</h1>
         <style amp-keyframes>
             @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
             @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-            @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-            
-            @keyframes textgrowth {0% { transform: scale(0.2); -webkit-transform: scale(0.2) } 100% { transform: scale(1); -webkit-transform: scale(1) } }
-            @-moz-keyframes textgrowth {0% { -moz-transform: scale(0.2) } 100% { -moz-transform: scale(1) } }
-            @-webkit-keyframes textgrowth {0% { -webkit-transform: scale(0.2) } 100% { -webkit-transform: scale(1) } }
-     
+            @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }     
         </style>
     </body>
 </html>
